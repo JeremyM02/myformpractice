@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1 Event Creator
+  form(method="POST" action="/result")
+    label(for="pageColor") Page Color
+    input(type = "color" name = "pageColor" id = "pageColor" value = `${_pageColor}`)
+
+    label(for="textColor") Text Color
+    input(type = "color" name = "textColor" id = "textColor" value = `${_textColor}`)
+
+    label(for="eventName") Event Name
+    input(type="text" name="eventName" id="eventName" value =  `${_eventName}`)
+
+    label(for="description") Event Description
+    textarea(id = "description" name = "description" cols=40 rows=5)
+
+    label(for="startDate") Start Date and Time
+    input(type="datetime-local" id="startDate" name="startDate" value =  `${_startDate}`)
+
+    label(for="recipients") Expected Recipients
+    input(type="number" id="recipients" name="recipients" value = `${_recipients}`)
+
+    label(for="eventNumber") Event Holder's Phone#
+    input(type="tel" id="eventNumber" name="eventNumber" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value = `${_eventNumber}`)
+
+    button(type="submit") Create Event

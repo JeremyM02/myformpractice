@@ -7,7 +7,7 @@ router.get('/', function(req, res) {
     _pageColor: "#F9F9F9",
     _textColor: "#020202",
     _eventName: "Halloween",
-    _startDate: "2021-10-04T18:30",
+    _startDate: "2021-10-31T16:30",
     _recipients: "30",
     _eventNumber: "559-123-4567"
   });

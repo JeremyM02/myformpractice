@@ -19,3 +19,32 @@ input {
 label, input{
   display: block;
 }
+.info-row, .info-container {
+  display: flex;
+}
+.info-row{
+  flex: 1;
+}
+.label {
+  font-weight: bold;
+  margin-right: 8px;
+  color: black;
+}
+.info-container {
+  gap: 16px;
+}
+.name-row {
+  font-size: 20px;
+}
+.page p {
+  margin: 9px;
+}
+.page{
+  border: 3px solid #020202;
+  padding: 16px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  font: 30px "Arial Black", sans-serif;
+}

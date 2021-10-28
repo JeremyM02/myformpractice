@@ -7,7 +7,7 @@ router.get('/', function(req, res) {
     _pageColor: "#F9F9F9",
     _textColor: "#020202",
     _eventName: "Halloween",
-    _startDate: "2021-10-31T16:30",
+    _startDate: `2021-10-31T16:30`,
     _recipients: "30",
     _eventNumber: "559-123-4567"
   });
@@ -15,7 +15,13 @@ router.get('/', function(req, res) {
 
 router.post('/result', function(req, res) {
   res.render('results', {
-    color: req.body.colorPicker
+    pageColor: req.body.pageColor,
+    textColor: req.body.textColor,
+    eventName: req.body.eventName,
+    startDate: new Date(req.body.startDate),
+    recipients: req.body.recipients,
+    eventNumber: req.body.eventNumber,
+    description: req.body.description
   })
 });
 module.exports = router;

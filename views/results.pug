@@ -1,4 +1,21 @@
 extends layout
 
 block content
-    h2 The color you chose was #{color}
+    div(class=`page` style=`background-color: ${pageColor || '#fff'}`)
+        h3.title #{eventName}
+        div.info-row.name-row
+            p.label Start Date:
+            p #{startDate.getMonth() + 1}/#{startDate.getDate()}/#{startDate.getFullYear()}
+
+            p.label Start Time:
+            p #{startDate.getHours()}:#{startDate.getMinutes()}
+        div.info-row
+            p.label About:
+            p #{description}
+        div.info-row
+            p.label Expected Recipients:
+            p #{recipients}
+
+        div.info-row
+            p.label Event Number
+            p #{eventNumber}
